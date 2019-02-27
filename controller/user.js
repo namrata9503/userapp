@@ -232,3 +232,62 @@ exports.deleteUserById = (req, res) => {
       });
     });
   };
+
+  exports.deleteOne = (req, res) => {
+    User.deleteOne({name:"geeta"
+    }, (error, deleteId) => {
+      if (error)
+        res.json({
+          error: error,
+          status: 500
+        });
+      res.json({
+        message: "Deleted successfully"
+      });
+    });
+  };
+
+  exports.deleteFindById = (req, res) => {
+    User.findByIdAndDelete({
+      _id: req.params.id
+    }, (error, deleteId) => {
+      if (error)
+        res.json({
+          error: error,
+          status: 500
+        });
+      res.json({
+        message: "Deleted successfully"
+      });
+    });
+  };
+
+  exports.removeFindById = (req, res) => {
+    User.findByIdAndRemove({
+      _id: req.params.id
+    }, (error, deleteId) => {
+      if (error)
+        res.json({
+          error: error,
+          status: 500
+        });
+      res.json({
+        message: "removed successfully"
+      });
+    });
+  };
+  exports.removeFind = (req, res) => {
+    User.findOneAndRemove({
+      _id: req.params.id
+    }, (error, deleteId) => {
+      if (error)
+        res.json({
+          error: error,
+          status: 500
+        });
+      res.json({
+        message: "removed successfully"
+      });
+    });
+  };
+  
