@@ -219,4 +219,16 @@ exports.deleteUserById = (req, res) => {
     });
   };
 
-  
+  exports.deleteMany = (req, res) => {
+    User.deleteMany({name:"nams"
+    }, (error, deleteId) => {
+      if (error)
+        res.json({
+          error: error,
+          status: 500
+        });
+      res.json({
+        message: "Deleted successfully"
+      });
+    });
+  };

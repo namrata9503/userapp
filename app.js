@@ -43,7 +43,8 @@ app.put('/api/v1/user', userController.updateOne);
 
 //app.put('/api/v1/user/:id', userController.replaceOne);
 
-app.delete('/api/v1/user/:id', userController.deleteUserById);
+//app.delete('/api/v1/user/:id', userController.deleteUserById);
+app.delete('/api/v1/user', userController.deleteMany);
 
 
 
