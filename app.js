@@ -43,11 +43,11 @@ app.put('/api/v1/user', userController.updateOne);
 
 //app.put('/api/v1/user/:id', userController.replaceOne);
 
-//app.delete('/api/v1/user/:id', userController.deleteUserById);
-//app.delete('/api/v1/user', userController.deleteMany);
-//app.delete('/api/v1/user', userController.deleteOne);
-//app.delete('/api/v1/user/:id', userController.deleteFindById);
-//app.delete('/api/v1/user/:id', userController.removeFindById);
+app.delete('/api/v1/user/:id', userController.deleteUserById);
+app.delete('/api/v1/user', userController.deleteMany);
+app.delete('/api/v1/user', userController.deleteOne);
+app.delete('/api/v1/user/:id', userController.deleteFindById);
+app.delete('/api/v1/user/:id', userController.removeFindById);
 app.delete('/api/v1/user/:id', userController.removeFind);
 
 
